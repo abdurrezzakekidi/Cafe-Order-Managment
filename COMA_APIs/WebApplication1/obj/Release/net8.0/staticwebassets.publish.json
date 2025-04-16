@@ -1,0 +1,20 @@
+{
+  "Version": 1,
+  "Hash": "ZDCKOptJTRjCuDXIiCDxLwHha5Cav0kkW+WWPZCYNaM=",
+  "Source": "WebApplication1",
+  "BasePath": "_content/WebApplication1",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "WebApplication1\\wwwroot",
+      "Source": "WebApplication1",
+      "ContentRoot": "C:\\Users\\Abdurezzak Ekidi\\OneDrive\\Masaüstü\\My Project\\COMA_APIs\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [],
+  "Endpoints": []
+}

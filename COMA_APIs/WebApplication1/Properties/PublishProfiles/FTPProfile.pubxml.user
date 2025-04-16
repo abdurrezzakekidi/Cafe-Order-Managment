@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwpSaBDnl0UWLPWRC/nfEfQAAAAACAAAAAAAQZgAAAAEAACAAAACvofAz41qXEo0w03x77d/pmt02rksiYOjrhh3g7c1CAwAAAAAOgAAAAAIAACAAAADjs0LdFXRzWitE7ZI3WI37QK7JslcU5NbqpQ1RMGyWszAAAACnUDvTNleUsK1G8rJWmpLlvV2i507gGfRMHE8YHz9+fgU7c5LxnUO3BvOAVLLkiglAAAAA6ny7+uMl2lZWKpL6TKr/p+jhmhKdr72RD49N0SiUmIAZByRDsX5XIqDL0v51hnuLk/rX5QuafI5Gtlt+h8s5lw==</EncryptedPassword>
+    <History>False|2024-11-16T16:54:23.5979322Z||;</History>
+    <LastFailureDetails />
+    <_PublishTargetUrl>ftp://coma.somee.com/www.coma.somee.com</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="appsettings.Development.json">
+      <publishTime>11/16/2024 19:14:17</publishTime>
+    </File>
+    <File Include="appsettings.json">
+      <publishTime>11/16/2024 19:16:29</publishTime>
+    </File>
+    <File Include="Azure.Core.dll">
+      <publishTime>02/26/2024 18:24:40</publishTime>
+    </File>
+    <File Include="Azure.Identity.dll">
+      <publishTime>06/10/2024 19:43:48</publishTime>
+    </File>
+    <File Include="Microsoft.Bcl.AsyncInterfaces.dll">
+      <publishTime>04/15/2020 01:39:12</publishTime>
+    </File>
+    <File Include="Microsoft.Data.SqlClient.dll">
+      <publishTime>08/27/2024 21:46:52</publishTime>
+    </File>
+    <File Include="Microsoft.Identity.Client.dll">
+      <publishTime>06/07/2024 01:09:28</publishTime>
+    </File>
+    <File Include="Microsoft.Identity.Client.Extensions.Msal.dll">
+      <publishTime>06/07/2024 01:14:52</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Abstractions.dll">
+      <publishTime>12/01/2023 07:56:56</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.JsonWebTokens.dll">
+      <publishTime>12/01/2023 07:34:00</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Logging.dll">
+      <publishTime>12/01/2023 07:35:22</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Protocols.dll">
+      <publishTime>12/01/2023 07:37:28</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Protocols.OpenIdConnect.dll">
+      <publishTime>12/01/2023 07:48:08</publishTime>
+    </File>
+    <File Include="Microsoft.OpenApi.dll">
+      <publishTime>08/29/2020 23:14:12</publishTime>
+    </File>
+    <File Include="Microsoft.SqlServer.Server.dll">
+      <publishTime>01/27/2022 20:19:08</publishTime>
+    </File>
+    <File Include="Swashbuckle.AspNetCore.Swagger.dll">
+      <publishTime>07/19/2022 18:21:22</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,93 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\My Project\\COMA_APIs\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{62F51C7A-3A1F-4264-81D6-4128989C6FAA}|WebApplication1\\WebApplication1.csproj|d:\\my project\\coma_apis\\webapplication1\\dataaccess\\orderdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62F51C7A-3A1F-4264-81D6-4128989C6FAA}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\dataaccess\\orderdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F51C7A-3A1F-4264-81D6-4128989C6FAA}|WebApplication1\\WebApplication1.csproj|d:\\my project\\coma_apis\\webapplication1\\controllers\\orderapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62F51C7A-3A1F-4264-81D6-4128989C6FAA}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\orderapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F51C7A-3A1F-4264-81D6-4128989C6FAA}|WebApplication1\\WebApplication1.csproj|d:\\my project\\coma_apis\\webapplication1\\webapplication1.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{62F51C7A-3A1F-4264-81D6-4128989C6FAA}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\webapplication1.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F51C7A-3A1F-4264-81D6-4128989C6FAA}|WebApplication1\\WebApplication1.csproj|d:\\my project\\coma_apis\\webapplication1\\global\\cloudinarysettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62F51C7A-3A1F-4264-81D6-4128989C6FAA}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\global\\cloudinarysettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderAPIController.cs",
+              "DocumentMoniker": "D:\\My Project\\COMA_APIs\\WebApplication1\\Controllers\\OrderAPIController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\OrderAPIController.cs",
+              "ToolTip": "D:\\My Project\\COMA_APIs\\WebApplication1\\Controllers\\OrderAPIController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\OrderAPIController.cs",
+              "ViewState": "AgIAAJQAAAAAAAAAAADwv58AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T11:22:42.356Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WebApplication1.http",
+              "DocumentMoniker": "D:\\My Project\\COMA_APIs\\WebApplication1\\WebApplication1.http",
+              "RelativeDocumentMoniker": "WebApplication1\\WebApplication1.http",
+              "ToolTip": "D:\\My Project\\COMA_APIs\\WebApplication1\\WebApplication1.http",
+              "RelativeToolTip": "WebApplication1\\WebApplication1.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-03-17T11:29:41.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CloudinarySettings.cs",
+              "DocumentMoniker": "D:\\My Project\\COMA_APIs\\WebApplication1\\Global\\CloudinarySettings.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Global\\CloudinarySettings.cs",
+              "ToolTip": "D:\\My Project\\COMA_APIs\\WebApplication1\\Global\\CloudinarySettings.cs",
+              "RelativeToolTip": "WebApplication1\\Global\\CloudinarySettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T11:28:10.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrderData.cs",
+              "DocumentMoniker": "D:\\My Project\\COMA_APIs\\WebApplication1\\DataAccess\\OrderData.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\DataAccess\\OrderData.cs",
+              "ToolTip": "D:\\My Project\\COMA_APIs\\WebApplication1\\DataAccess\\OrderData.cs",
+              "RelativeToolTip": "WebApplication1\\DataAccess\\OrderData.cs",
+              "ViewState": "AgIAAHUBAAAAAAAAAAAAAHUBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T10:17:04.457Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
