@@ -1,0 +1,824 @@
+
+CREATE TABLE [dbo].[Orders](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[TableId] [int] NOT NULL,
+	[ProductId] [int] NOT NULL,
+	[Status] [nvarchar](50) NOT NULL,
+	[OrderDate] [datetime] NOT NULL,
+ CONSTRAINT [PK_siparisler] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Products]    Script Date: 1.12.2024 21:30:53 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Products](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](50) NOT NULL,
+	[Price] [decimal](18, 2) NOT NULL,
+	[Status] [nvarchar](20) NOT NULL,
+ CONSTRAINT [PK_urunler] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Tables]    Script Date: 1.12.2024 21:30:53 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Tables](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[No] [int] NOT NULL,
+	[Status] [nvarchar](10) NOT NULL,
+ CONSTRAINT [PK_masalar] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Users]    Script Date: 1.12.2024 21:30:53 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Users](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](50) NOT NULL,
+	[Password] [nvarchar](20) NOT NULL,
+	[Role] [nvarchar](20) NOT NULL,
+	[imagePath] [nvarchar](500) NULL,
+ CONSTRAINT [PK_kullaicilar] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[Orders] ON 
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (3, 7, 13, N'Odendi', CAST(N'2024-11-15T01:18:04.107' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (4, 7, 12, N'Odendi', CAST(N'2024-11-15T01:46:55.840' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (5, 4, 1, N'Odendi', CAST(N'2024-11-15T04:51:33.880' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (6, 13, 10, N'Odendi', CAST(N'2024-11-15T07:32:56.613' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (7, 13, 5, N'Odendi', CAST(N'2024-11-15T07:33:00.590' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (8, 13, 9, N'Odendi', CAST(N'2024-11-15T07:33:05.477' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (9, 3, 13, N'Odendi', CAST(N'2024-11-15T07:33:21.613' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (10, 3, 9, N'Odendi', CAST(N'2024-11-15T07:33:25.803' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (11, 3, 13, N'Odendi', CAST(N'2024-11-15T07:33:28.833' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (12, 3, 7, N'Odendi', CAST(N'2024-11-15T07:33:34.783' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (13, 8, 7, N'Odendi', CAST(N'2024-11-15T07:33:44.720' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (14, 8, 7, N'Odendi', CAST(N'2024-11-15T07:33:49.287' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (15, 4, 8, N'Odendi', CAST(N'2024-11-16T01:56:58.590' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (16, 9, 4, N'Odendi', CAST(N'2024-11-16T11:54:19.423' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (17, 9, 4, N'Odendi', CAST(N'2024-11-16T11:54:25.040' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (18, 9, 14, N'Odendi', CAST(N'2024-11-16T11:54:39.217' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (19, 9, 11, N'Odendi', CAST(N'2024-11-16T11:54:41.490' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (20, 3, 10, N'Odendi', CAST(N'2024-11-16T12:00:53.713' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (22, 4, 14, N'Odendi', CAST(N'2024-11-16T12:05:39.233' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (24, 4, 14, N'Odendi', CAST(N'2024-11-16T12:15:01.333' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (25, 4, 14, N'Odendi', CAST(N'2024-11-16T12:15:48.060' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (26, 13, 9, N'Odendi', CAST(N'2024-11-16T12:28:44.500' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (27, 13, 2, N'Odendi', CAST(N'2024-11-16T12:29:23.903' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (28, 14, 10, N'Odendi', CAST(N'2024-11-16T12:30:48.963' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (29, 15, 6, N'Odendi', CAST(N'2024-11-16T12:31:56.840' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (30, 19, 2, N'Odendi', CAST(N'2024-11-17T05:35:32.310' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (31, 19, 13, N'Odendi', CAST(N'2024-11-17T05:35:42.373' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (32, 19, 7, N'Odendi', CAST(N'2024-11-17T05:35:45.257' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (33, 8, 11, N'Odendi', CAST(N'2024-11-17T05:35:56.123' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (34, 8, 12, N'Odendi', CAST(N'2024-11-17T05:35:57.700' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (35, 8, 14, N'Odendi', CAST(N'2024-11-17T05:35:58.540' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (36, 8, 8, N'Odendi', CAST(N'2024-11-17T05:36:01.057' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (37, 5, 13, N'Odendi', CAST(N'2024-11-17T05:36:09.993' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (38, 5, 13, N'Odendi', CAST(N'2024-11-17T05:36:10.833' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (39, 5, 10, N'Odendi', CAST(N'2024-11-18T01:45:48.133' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (41, 6, 5, N'Odendi', CAST(N'2024-11-18T12:45:03.907' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (42, 19, 5, N'Odendi', CAST(N'2024-11-18T12:45:12.297' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (43, 19, 10, N'Odendi', CAST(N'2024-11-18T12:45:14.547' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (44, 6, 11, N'Odendi', CAST(N'2024-11-18T12:48:02.783' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (45, 8, 10, N'Odendi', CAST(N'2024-11-18T12:50:00.440' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (46, 8, 5, N'Odendi', CAST(N'2024-11-18T12:50:01.987' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (47, 8, 4, N'Odendi', CAST(N'2024-11-18T12:50:04.257' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (48, 8, 14, N'Odendi', CAST(N'2024-11-18T12:50:06.007' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (49, 3, 13, N'Odendi', CAST(N'2024-11-18T12:50:16.737' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (50, 3, 2, N'Odendi', CAST(N'2024-11-18T12:50:18.257' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (51, 3, 6, N'Odendi', CAST(N'2024-11-18T12:50:18.943' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (52, 3, 9, N'Odendi', CAST(N'2024-11-18T12:50:20.517' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (53, 3, 11, N'Odendi', CAST(N'2024-11-18T12:50:22.563' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (54, 15, 2, N'Odendi', CAST(N'2024-11-18T12:50:42.647' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (55, 15, 6, N'Odendi', CAST(N'2024-11-18T12:50:43.173' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (56, 4, 14, N'Odendi', CAST(N'2024-11-18T12:50:50.323' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (57, 5, 8, N'Odendi', CAST(N'2024-11-18T12:50:58.820' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (58, 12, 7, N'Odendi', CAST(N'2024-11-18T12:51:07.617' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (59, 12, 7, N'Odendi', CAST(N'2024-11-18T12:51:08.963' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (60, 19, 10, N'Odendi', CAST(N'2024-11-19T06:54:05.587' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (61, 19, 11, N'Odendi', CAST(N'2024-11-19T06:54:06.557' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (62, 7, 4, N'Odendi', CAST(N'2024-11-19T06:54:13.157' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (63, 7, 13, N'Odendi', CAST(N'2024-11-19T06:54:14.497' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (64, 15, 5, N'Odendi', CAST(N'2024-11-19T06:54:21.637' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (65, 15, 2, N'Odendi', CAST(N'2024-11-19T06:54:22.187' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (66, 14, 6, N'Odendi', CAST(N'2024-11-19T06:54:32.413' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (67, 14, 7, N'Odendi', CAST(N'2024-11-19T06:54:33.047' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (68, 14, 8, N'Odendi', CAST(N'2024-11-19T06:54:34.680' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (69, 13, 9, N'Odendi', CAST(N'2024-11-19T06:54:47.130' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (70, 13, 10, N'Odendi', CAST(N'2024-11-19T06:54:47.640' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (71, 13, 11, N'Odendi', CAST(N'2024-11-19T06:54:49.817' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (72, 12, 14, N'Odendi', CAST(N'2024-11-19T06:54:56.870' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (73, 12, 12, N'Odendi', CAST(N'2024-11-19T06:54:57.577' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (74, 3, 2, N'Odendi', CAST(N'2024-11-19T06:55:05.277' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (75, 3, 11, N'Odendi', CAST(N'2024-11-19T06:55:06.610' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (76, 3, 14, N'Odendi', CAST(N'2024-11-19T06:55:08.017' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (77, 4, 10, N'Odendi', CAST(N'2024-11-19T06:55:13.630' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (78, 4, 9, N'Odendi', CAST(N'2024-11-19T06:55:13.957' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (79, 5, 2, N'Odendi', CAST(N'2024-11-19T06:55:23.640' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (80, 6, 7, N'Odendi', CAST(N'2024-11-19T06:55:28.217' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (81, 9, 4, N'Odendi', CAST(N'2024-11-19T06:55:33.300' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (82, 10, 13, N'Odendi', CAST(N'2024-11-19T06:55:37.370' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (83, 11, 6, N'Odendi', CAST(N'2024-11-19T06:55:41.920' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (84, 8, 11, N'Odendi', CAST(N'2024-11-19T06:55:50.387' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (85, 3, 10, N'Odendi', CAST(N'2024-11-19T09:08:42.317' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (86, 4, 12, N'Odendi', CAST(N'2024-11-19T10:17:02.983' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (87, 3, 11, N'Odendi', CAST(N'2024-11-19T10:26:45.400' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (88, 6, 11, N'Odendi', CAST(N'2024-11-19T10:29:11.530' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (89, 5, 9, N'Odendi', CAST(N'2024-11-19T10:31:15.023' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (90, 6, 11, N'Odendi', CAST(N'2024-11-19T10:34:56.617' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (91, 3, 14, N'Odendi', CAST(N'2024-11-19T11:23:38.830' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (92, 5, 14, N'Odendi', CAST(N'2024-11-19T11:30:40.003' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (93, 5, 11, N'Odendi', CAST(N'2024-11-19T11:32:09.090' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (94, 4, 14, N'Odendi', CAST(N'2024-11-19T11:34:39.827' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (96, 5, 11, N'Odendi', CAST(N'2024-11-20T06:27:55.313' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (97, 19, 9, N'Odendi', CAST(N'2024-11-24T03:30:04.993' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (98, 19, 7, N'Odendi', CAST(N'2024-11-24T03:30:06.210' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (99, 19, 5, N'Odendi', CAST(N'2024-11-24T03:30:07.867' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (100, 13, 11, N'Odendi', CAST(N'2024-11-24T03:30:13.300' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (101, 13, 9, N'Odendi', CAST(N'2024-11-24T03:30:14.080' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (102, 5, 14, N'Odendi', CAST(N'2024-11-24T03:30:19.257' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (103, 5, 13, N'Odendi', CAST(N'2024-11-24T03:30:21.273' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (104, 3, 14, N'Odendi', CAST(N'2024-11-24T03:30:25.480' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (105, 3, 12, N'Odendi', CAST(N'2024-11-24T03:30:25.817' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (106, 3, 11, N'Odendi', CAST(N'2024-11-24T03:30:27.857' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (107, 7, 6, N'Odendi', CAST(N'2024-11-24T03:30:35.087' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (108, 7, 7, N'Odendi', CAST(N'2024-11-24T03:30:35.763' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (109, 10, 14, N'Odendi', CAST(N'2024-11-24T03:30:40.833' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (110, 10, 8, N'Odendi', CAST(N'2024-11-24T03:30:41.870' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (111, 10, 5, N'Odendi', CAST(N'2024-11-24T03:30:44.440' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (112, 6, 12, N'Odendi', CAST(N'2024-11-24T07:58:15.123' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (114, 6, 2, N'Odendi', CAST(N'2024-11-24T07:59:44.520' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (115, 13, 14, N'Odendi', CAST(N'2024-11-27T11:57:10.560' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (116, 13, 9, N'Odendi', CAST(N'2024-11-27T11:57:11.447' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (117, 15, 6, N'Odendi', CAST(N'2024-11-27T11:57:18.170' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (118, 15, 2, N'Odendi', CAST(N'2024-11-27T11:57:18.943' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (119, 14, 4, N'Odendi', CAST(N'2024-11-27T11:57:26.467' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (120, 14, 2, N'Odendi', CAST(N'2024-11-27T11:57:27.290' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (121, 14, 6, N'Odendi', CAST(N'2024-11-27T11:57:27.797' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (122, 19, 1, N'Odendi', CAST(N'2024-11-27T11:57:32.903' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (123, 19, 1, N'Odendi', CAST(N'2024-11-27T11:57:33.087' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (124, 10, 14, N'Odendi', CAST(N'2024-11-27T11:57:45.730' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (125, 10, 2, N'Odendi', CAST(N'2024-11-27T11:57:47.367' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (127, 3, 10, N'Odendi', CAST(N'2024-11-28T14:29:37.520' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (128, 3, 6, N'Odendi', CAST(N'2024-11-28T14:29:40.457' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (129, 8, 10, N'Odendi', CAST(N'2024-11-28T14:29:45.767' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (130, 8, 11, N'Odendi', CAST(N'2024-11-28T14:29:46.730' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (131, 8, 5, N'Odendi', CAST(N'2024-11-28T14:29:48.330' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (132, 4, 14, N'Odendi', CAST(N'2024-11-28T14:29:54.330' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (133, 4, 12, N'Odendi', CAST(N'2024-11-28T14:29:54.897' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (134, 4, 11, N'Odendi', CAST(N'2024-11-28T14:29:56.693' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (135, 5, 6, N'Odendi', CAST(N'2024-11-28T14:30:06.173' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (136, 5, 9, N'Odendi', CAST(N'2024-11-28T14:30:07.133' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (137, 6, 14, N'Odendi', CAST(N'2024-11-28T14:30:11.783' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (138, 6, 10, N'Odendi', CAST(N'2024-11-28T14:30:13.003' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (139, 6, 7, N'Odendi', CAST(N'2024-11-28T14:30:14.583' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (140, 6, 4, N'Odendi', CAST(N'2024-11-28T14:30:15.943' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (141, 7, 13, N'Odendi', CAST(N'2024-11-28T14:30:23.003' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (142, 7, 9, N'Odendi', CAST(N'2024-11-28T14:30:25.037' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (143, 7, 7, N'Odendi', CAST(N'2024-11-28T14:30:26.063' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (145, 5, 11, N'Odendi', CAST(N'2024-11-29T04:43:16.110' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (146, 4, 1, N'Odendi', CAST(N'2024-11-29T04:43:28.860' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (147, 6, 11, N'Odendi', CAST(N'2024-11-29T04:46:15.147' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (148, 7, 7, N'Odendi', CAST(N'2024-11-29T04:47:51.193' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (151, 8, 11, N'Odendi', CAST(N'2024-11-29T05:00:56.280' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (153, 9, 11, N'Odendi', CAST(N'2024-11-29T05:09:43.270' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (154, 10, 14, N'Odendi', CAST(N'2024-11-29T05:14:42.843' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (155, 10, 14, N'Odendi', CAST(N'2024-11-29T05:27:25.197' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (156, 10, 14, N'Odendi', CAST(N'2024-11-29T05:29:42.670' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (160, 11, 4, N'Odendi', CAST(N'2024-11-29T05:39:10.293' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (161, 11, 9, N'Odendi', CAST(N'2024-11-29T07:24:21.597' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (163, 12, 10, N'Odendi', CAST(N'2024-11-29T07:25:00.460' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (164, 12, 9, N'Odendi', CAST(N'2024-11-29T07:25:05.583' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (168, 4, 11, N'Odendi', CAST(N'2024-11-29T08:30:37.480' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (169, 5, 11, N'Odendi', CAST(N'2024-11-29T08:43:30.153' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (170, 5, 14, N'Odendi', CAST(N'2024-11-29T11:06:21.183' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (171, 5, 11, N'Odendi', CAST(N'2024-11-29T11:07:17.247' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (172, 3, 14, N'Odendi', CAST(N'2024-11-30T07:55:51.060' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (173, 3, 5, N'Odendi', CAST(N'2024-11-30T07:55:53.773' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (174, 3, 12, N'Odendi', CAST(N'2024-11-30T07:55:55.757' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (175, 3, 11, N'Odendi', CAST(N'2024-11-30T07:55:57.680' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (176, 4, 14, N'Odendi', CAST(N'2024-11-30T07:56:03.397' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (177, 4, 9, N'Odendi', CAST(N'2024-11-30T07:56:05.313' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (178, 4, 7, N'Odendi', CAST(N'2024-11-30T07:56:07.570' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (179, 5, 2, N'Odendi', CAST(N'2024-11-30T07:56:15.207' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (180, 5, 5, N'Odendi', CAST(N'2024-11-30T07:56:18.207' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (181, 5, 4, N'Odendi', CAST(N'2024-11-30T07:56:21.370' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (182, 6, 5, N'Odendi', CAST(N'2024-11-30T07:56:26.843' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (183, 6, 11, N'Odendi', CAST(N'2024-11-30T07:56:28.837' AS DateTime))
+GO
+INSERT [dbo].[Orders] ([id], [TableId], [ProductId], [Status], [OrderDate]) VALUES (184, 6, 10, N'Odendi', CAST(N'2024-11-30T07:56:30.617' AS DateTime))
+GO
+SET IDENTITY_INSERT [dbo].[Orders] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Products] ON 
+GO
+INSERT [dbo].[Products] ([Id], [Name], [Price], [Status]) VALUES (1, N'COLA', CAST(20.00 AS Decimal(18, 2)), N'Yok')
+GO
+INSERT [dbo].[Products] ([Id], [Name], [Price], [Status]) VALUES (2, N'Portakal suyu', CAST(15.00 AS Decimal(18, 2)), N'Var')
+GO
+INSERT [dbo].[Products] ([Id], [Name], [Price], [Status]) VALUES (4, N'Türk Kahvesi', CAST(60.00 AS Decimal(18, 2)), N'Var')
+GO
+INSERT [dbo].[Products] ([Id], [Name], [Price], [Status]) VALUES (5, N'Sütlü Türk Kahvesi', CAST(70.00 AS Decimal(18, 2)), N'Var')
+GO
+INSERT [dbo].[Products] ([Id], [Name], [Price], [Status]) VALUES (6, N'Osmanli Dibek Kahvesi', CAST(70.00 AS Decimal(18, 2)), N'Var')
+GO
+INSERT [dbo].[Products] ([Id], [Name], [Price], [Status]) VALUES (7, N'Menengiç Kahvesi', CAST(75.00 AS Decimal(18, 2)), N'Var')
+GO
+INSERT [dbo].[Products] ([Id], [Name], [Price], [Status]) VALUES (8, N'Kervansaray Kahvesi', CAST(70.00 AS Decimal(18, 2)), N'Var')
+GO
+INSERT [dbo].[Products] ([Id], [Name], [Price], [Status]) VALUES (9, N'Harput Kahvesi', CAST(70.00 AS Decimal(18, 2)), N'Var')
+GO
+INSERT [dbo].[Products] ([Id], [Name], [Price], [Status]) VALUES (10, N'Damla Sakizli Türk Kahvesi', CAST(70.00 AS Decimal(18, 2)), N'Var')
+GO
+INSERT [dbo].[Products] ([Id], [Name], [Price], [Status]) VALUES (11, N'Çilekli Türk Kahvesi', CAST(70.00 AS Decimal(18, 2)), N'Var')
+GO
+INSERT [dbo].[Products] ([Id], [Name], [Price], [Status]) VALUES (12, N'Çikolatali Türk Kahvesi', CAST(70.00 AS Decimal(18, 2)), N'Var')
+GO
+INSERT [dbo].[Products] ([Id], [Name], [Price], [Status]) VALUES (13, N'Vanilyali Türk Kahvesi', CAST(70.00 AS Decimal(18, 2)), N'Var')
+GO
+INSERT [dbo].[Products] ([Id], [Name], [Price], [Status]) VALUES (14, N'Çikolata Çilek Sütlü Türk Kahvesi', CAST(75.00 AS Decimal(18, 2)), N'Var')
+GO
+SET IDENTITY_INSERT [dbo].[Products] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Tables] ON 
+GO
+INSERT [dbo].[Tables] ([Id], [No], [Status]) VALUES (3, 11, N'Bos')
+GO
+INSERT [dbo].[Tables] ([Id], [No], [Status]) VALUES (4, 1, N'Bos')
+GO
+INSERT [dbo].[Tables] ([Id], [No], [Status]) VALUES (5, 2, N'Bos')
+GO
+INSERT [dbo].[Tables] ([Id], [No], [Status]) VALUES (6, 3, N'Bos')
+GO
+INSERT [dbo].[Tables] ([Id], [No], [Status]) VALUES (7, 4, N'Bos')
+GO
+INSERT [dbo].[Tables] ([Id], [No], [Status]) VALUES (8, 5, N'Bos')
+GO
+INSERT [dbo].[Tables] ([Id], [No], [Status]) VALUES (9, 6, N'Bos')
+GO
+INSERT [dbo].[Tables] ([Id], [No], [Status]) VALUES (10, 7, N'Bos')
+GO
+INSERT [dbo].[Tables] ([Id], [No], [Status]) VALUES (11, 8, N'Bos')
+GO
+INSERT [dbo].[Tables] ([Id], [No], [Status]) VALUES (12, 9, N'Bos')
+GO
+INSERT [dbo].[Tables] ([Id], [No], [Status]) VALUES (13, 10, N'Bos')
+GO
+INSERT [dbo].[Tables] ([Id], [No], [Status]) VALUES (14, 12, N'Bos')
+GO
+INSERT [dbo].[Tables] ([Id], [No], [Status]) VALUES (15, 13, N'Bos')
+GO
+INSERT [dbo].[Tables] ([Id], [No], [Status]) VALUES (19, 15, N'Bos')
+GO
+INSERT [dbo].[Tables] ([Id], [No], [Status]) VALUES (23, 17, N'Bos')
+GO
+SET IDENTITY_INSERT [dbo].[Tables] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Users] ON 
+GO
+INSERT [dbo].[Users] ([Id], [Name], [Password], [Role], [imagePath]) VALUES (1, N'Diyaeddin', N'1234', N'Manager', N'http://res.cloudinary.com/dimqzhedo/image/upload/v1732900435/tt6gs3tytrhytcteq7i0.jpg')
+GO
+INSERT [dbo].[Users] ([Id], [Name], [Password], [Role], [imagePath]) VALUES (3, N'mert', N'0000', N'Waiter', NULL)
+GO
+INSERT [dbo].[Users] ([Id], [Name], [Password], [Role], [imagePath]) VALUES (4, N'ali', N'0000', N'Chef', NULL)
+GO
+INSERT [dbo].[Users] ([Id], [Name], [Password], [Role], [imagePath]) VALUES (5, N'veli', N'0000', N'Cashier', NULL)
+GO
+SET IDENTITY_INSERT [dbo].[Users] OFF
+GO
+ALTER TABLE [dbo].[Orders] ADD  CONSTRAINT [DF_Orders_OrderDate]  DEFAULT (getdate()) FOR [OrderDate]
+GO
+ALTER TABLE [dbo].[Orders]  WITH CHECK ADD  CONSTRAINT [FK_siparisler_masalar1] FOREIGN KEY([TableId])
+REFERENCES [dbo].[Tables] ([Id])
+GO
+ALTER TABLE [dbo].[Orders] CHECK CONSTRAINT [FK_siparisler_masalar1]
+GO
+ALTER TABLE [dbo].[Orders]  WITH CHECK ADD  CONSTRAINT [FK_siparisler_urunler1] FOREIGN KEY([ProductId])
+REFERENCES [dbo].[Products] ([Id])
+GO
+CREATE PROCEDURE [dbo].[SP_AddNewOrder]
+@TableId int,
+@ProductId int,
+@Status NVARCHAR(50),
+@addedId int OUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    -- Varsayılan OrderDate ile yeni kayıt ekle
+    INSERT INTO Orders (TableId, ProductId, Status)
+    VALUES (@TableId, @ProductId, @Status);
+
+    -- Eklenen kaydın kimliğini döndür
+    SET @addedId = SCOPE_IDENTITY();
+
+    -- İlgili tablo durumunu güncelle
+    UPDATE Tables
+    SET Status = 'Dolu'
+    WHERE Id = @TableId;
+END;
+create PROCEDURE [dbo].[SP_AddNewProduct]
+    @Name NVARCHAR(50),
+    @Price decimal(18,2),
+	@Status NVARCHAR(20),
+    @addedId INT OUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF EXISTS (SELECT 1 FROM Products WHERE Name = @Name)
+    BEGIN
+        SET @addedId = -1;
+    END
+    ELSE
+    BEGIN
+        INSERT INTO Products(Name,Price,Status)
+        VALUES (@Name,@Price,@Status);
+
+        SET @addedId = SCOPE_IDENTITY();
+    END
+END;
+Create PROCEDURE [dbo].[SP_AddNewTable]
+    @No int,
+    @Status NVARCHAR(10),
+    @addedId INT OUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF EXISTS (SELECT 1 FROM Tables WHERE No = @No)
+    BEGIN
+        SET @addedId = -1;
+    END
+    ELSE
+    BEGIN
+        INSERT INTO Tables(No,Status)
+        VALUES (@No,@Status);
+
+        SET @addedId = SCOPE_IDENTITY();
+    END
+END;
+
+Create PROCEDURE [dbo].[SP_AddNewUser]
+    @Name NVARCHAR(50),
+    @Password NVARCHAR(20),
+@Role nvarchar(20),
+    @addedId INT OUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF EXISTS (SELECT 1 FROM users WHERE Name = @Name)
+    BEGIN
+        SET @addedId = -1;
+    END
+    ELSE
+    BEGIN
+        INSERT INTO users(Name,Password,Role)
+        VALUES (@Name,@Password,@Role);
+
+        SET @addedId = SCOPE_IDENTITY();
+    END
+END;
+
+CREATE procedure [dbo].[SP_DeleteOrder]
+@OrderId int,
+@TableId int
+as
+
+Begin
+	Delete from Orders where id = @OrderId;
+	if not exists (select 1 from Orders where TableId = @TableId and (Status != 'Odendi'))
+	Begin
+		update Tables set Status = 'Bos' where Id = @TableId;
+	End
+end
+
+create procedure [dbo].[SP_DeleteProduct]
+@ProductId int
+as
+
+Begin
+	Delete from Products where Id = @ProductId;
+end
+create procedure [dbo].[SP_DeleteTable]
+@TableId int
+as
+
+Begin
+	Delete from Tables where Id = @TableId;
+end
+
+CREATE procedure [dbo].[SP_DeleteUser]
+@UserId int
+as
+
+Begin
+	Delete from Users where Id = @UserId and Role != 'Manager';
+end
+CREATE procedure [dbo].[SP_GetAllOrders]
+as
+Begin
+	SELECT Tables.No, Products.Name, Orders.id,Orders.Status
+	FROM     Orders INNER JOIN
+                  Products ON Orders.ProductId = Products.Id INNER JOIN
+                  Tables ON Orders.TableId = Tables.Id where Orders.Status = 'Sipariş Edildi' order by Tables.No;
+End
+CREATE procedure [dbo].[SP_GetAllProducts]
+as
+Begin
+	select * from Products order by Name;
+End
+create procedure [dbo].[SP_GetAllTableOrders]
+@TableId int 
+as 
+Begin
+	SELECT Products.Name, Products.Price
+	FROM     Orders INNER JOIN
+                  Products ON Orders.ProductId = Products.Id INNER JOIN
+                  Tables ON Orders.TableId = Tables.Id where Orders.Status = 'Teslim Edildi' and Tables.Id = @TableId;
+End
+create procedure [dbo].[SP_GetAllTables]
+as
+Begin
+	select * from Tables;
+End
+CREATE procedure [dbo].[SP_GetAllUsers]
+as
+Begin
+select * from Users;
+End
+CREATE PROCEDURE [dbo].[SP_GetDailyReport]
+AS
+BEGIN
+    SELECT 
+        Products.Name, 
+        COUNT(*) AS Quantity,
+        SUM(Products.Price) AS TotalAmount
+    FROM Orders
+    INNER JOIN Products ON Orders.ProductId = Products.Id
+    WHERE Orders.Status = 'Odendi'
+    AND CAST(Orders.OrderDate AS DATE) = CAST(GETDATE() AS DATE)
+    GROUP BY Products.Name, Products.Price;
+END
+CREATE PROCEDURE [dbo].[SP_GetDailyReport]
+AS
+BEGIN
+    SELECT 
+        Products.Name, 
+        COUNT(*) AS Quantity,
+        SUM(Products.Price) AS TotalAmount
+    FROM Orders
+    INNER JOIN Products ON Orders.ProductId = Products.Id
+    WHERE Orders.Status = 'Odendi'
+    AND CAST(Orders.OrderDate AS DATE) = CAST(GETDATE() AS DATE)
+    GROUP BY Products.Name, Products.Price;
+END
+CREATE PROCEDURE [dbo].[SP_GetMonthlyDailyRevenue]
+AS
+BEGIN
+    -- Bu ayın ilk ve son günlerini belirle
+    DECLARE @StartOfMonth DATE = DATEADD(DAY, 1-DAY(GETDATE()), CAST(GETDATE() AS DATE));
+    DECLARE @EndOfMonth DATE = EOMONTH(GETDATE());
+    
+    -- Günlük toplam gelirleri getir
+    SELECT 
+        CAST(OrderDate AS DATE) AS Day, 
+        SUM(Products.Price) AS DailyRevenue
+    FROM Orders
+    INNER JOIN Products ON Orders.ProductId = Products.Id
+    WHERE Orders.Status = 'Odendi'
+    AND OrderDate >= @StartOfMonth AND OrderDate <= @EndOfMonth
+    GROUP BY CAST(OrderDate AS DATE)
+    ORDER BY Day;
+END
+create procedure [dbo].[SP_GetOrderById]
+@OrderId int
+as
+Begin
+select * from Orders where id = @OrderId;
+End
+create procedure [dbo].[SP_GetProductById]
+@ProductId int
+as
+Begin
+	select*from Products where Id = @ProductId;
+End
+CREATE procedure [dbo].[SP_GetTableOrders]
+@TableId int
+as
+Begin
+	SELECT distinct Orders.*
+	FROM     Orders INNER JOIN
+                  Tables ON Orders.TableId = @TableId where Orders.Status != 'Odendi';
+End
+create procedure [dbo].[SP_GetUserById]
+@UserId int
+as
+Begin
+	select*from Users where Id = @UserId;
+End
+CREATE PROCEDURE [dbo].[SP_GetYearlyMonthlyRevenue]
+AS
+BEGIN
+    -- Bu yılın başlangıcını ve bugünkü tarihi belirle
+    DECLARE @StartOfYear DATE = DATEFROMPARTS(YEAR(GETDATE()), 1, 1);
+    DECLARE @EndOfYear DATE = DATEFROMPARTS(YEAR(GETDATE()), 12, 31);
+
+    -- Aylık toplam gelirleri getir
+    SELECT 
+        DATENAME(MONTH, OrderDate) AS MonthName,
+        MONTH(OrderDate) AS MonthNumber,
+        SUM(Products.Price) AS MonthlyRevenue
+    FROM Orders
+    INNER JOIN Products ON Orders.ProductId = Products.Id
+    WHERE Orders.Status = 'Odendi'
+    AND OrderDate >= @StartOfYear AND OrderDate <= @EndOfYear
+    GROUP BY MONTH(OrderDate), DATENAME(MONTH, OrderDate)
+    ORDER BY MonthNumber;
+END
+Create procedure [dbo].[SP_Login]
+@Username nvarchar(50),
+@Password nvarchar(20)
+as
+Begin
+	select*from Users where Name = @Username and Password = @Password;
+End
+CREATE procedure [dbo].[SP_PayTableOrders]
+@TableId int
+as
+
+Begin
+	Update Tables set Status = 'Bos' where Id = @TableId;
+	update Orders set Status = 'Odendi' where TableId = @TableId;
+end
+CREATE PROCEDURE [dbo].[SP_UpdateOrder]
+    @Id INT,
+    @TableId int,
+    @ProductId int,
+	@Status NVARCHAR(50)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    UPDATE Orders
+    SET TableId = @TableId, ProductId = @ProductId, Status = @Status
+    WHERE id = @Id;
+END;
+create PROCEDURE [dbo].[SP_UpdateProduct]
+    @Id INT,
+    @Name NVARCHAR(50),
+    @Price decimal(18,2),
+	@Status NVARCHAR(20)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    
+    -- Eğer yeni isim başka bir kullanıcı tarafından kullanılıyorsa, güncelleme yapma
+    IF EXISTS (SELECT 1 FROM Products WHERE Name = @Name AND Id <> @Id)
+    BEGIN
+        ---- Burada işlem yapılmıyor, çünkü isim başka biri tarafından kullanılıyor
+        --RAISERROR('This name is used.', 16, 1);
+        RETURN;
+    END
+    
+    -- Eğer isim kullanılmıyorsa, güncellemeyi yap
+    UPDATE Products
+    SET Name = @Name,Price = @Price, Status = @Status
+    WHERE Id = @Id;
+END;
+create PROCEDURE [dbo].[SP_UpdateTable]
+    @Id INT,
+    @No int,
+    @Status NVARCHAR(10)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    
+    -- Eğer yeni isim başka bir kullanıcı tarafından kullanılıyorsa, güncelleme yapma
+    IF EXISTS (SELECT 1 FROM Tables WHERE No = @No AND Id <> @Id)
+    BEGIN
+        ---- Burada işlem yapılmıyor, çünkü isim başka biri tarafından kullanılıyor
+        --RAISERROR('This name is used.', 16, 1);
+        RETURN;
+    END
+    
+    -- Eğer isim kullanılmıyorsa, güncellemeyi yap
+    UPDATE Tables
+    SET No = @No, Status = @Status
+    WHERE Id = @Id;
+END;
+CREATE PROCEDURE [dbo].[SP_UpdateUser]
+    @Id INT,
+    @Name NVARCHAR(50),
+    @Password NVARCHAR(20),
+    @Role NVARCHAR(20)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    
+    -- Eğer yeni isim başka bir kullanıcı tarafından kullanılıyorsa, güncelleme yapma
+    IF EXISTS (SELECT 1 FROM Users WHERE Name = @Name AND Id <> @Id)
+    BEGIN
+        ---- Burada işlem yapılmıyor, çünkü isim başka biri tarafından kullanılıyor
+        --RAISERROR('This name is used.', 16, 1);
+        RETURN;
+    END
+    
+    -- Eğer isim kullanılmıyorsa, güncellemeyi yap
+    UPDATE Users
+    SET Name = @Name, Password = @Password, Role = @Role
+    WHERE Id = @Id;
+END;
+CREATE PROCEDURE [dbo].[SP_UpdateUserImage]
+@id int,
+    @newPath NVARCHAR(500)
+AS
+BEGIN
+    UPDATE Users
+        SET imagePath = @newPath
+        WHERE Id= @id;
+END;
