@@ -460,7 +460,7 @@ SET IDENTITY_INSERT [dbo].[Tables] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Users] ON 
 GO
-INSERT [dbo].[Users] ([Id], [Name], [Password], [Role], [imagePath]) VALUES (1, N'Diyaeddin', N'1234', N'Manager', N'http://res.cloudinary.com/dimqzhedo/image/upload/v1732900435/tt6gs3tytrhytcteq7i0.jpg')
+INSERT [dbo].[Users] ([Id], [Name], [Password], [Role], [imagePath]) VALUES (1, N'Abdurrezzak', N'1234', N'Manager', N'http://res.cloudinary.com/dimqzhedo/image/upload/v1732900435/tt6gs3tytrhytcteq7i0.jpg')
 GO
 INSERT [dbo].[Users] ([Id], [Name], [Password], [Role], [imagePath]) VALUES (3, N'mert', N'0000', N'Waiter', NULL)
 GO
